@@ -1,0 +1,16 @@
+PODS:
+  - OpenWeatherMapKit (0.2.0)
+
+DEPENDENCIES:
+  - OpenWeatherMapKit
+
+SPEC REPOS:
+  trunk:
+    - OpenWeatherMapKit
+
+SPEC CHECKSUMS:
+  OpenWeatherMapKit: b348bc63affd808b114467a77488eb12a523f0b5
+
+PODFILE CHECKSUM: aae30465e40aa2aa0fc16bdb8606ff2342a701f2
+
+COCOAPODS: 1.8.3
