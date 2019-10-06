@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1YB-v5-FNC">
-                                <rect key="frame" x="197" y="394" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1YB-v5-FNC">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOx-zz-f0n">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
@@ -26,8 +25,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1YB-v5-FNC" firstAttribute="centerY" secondItem="sIb-LW-e46" secondAttribute="centerY" id="8g7-Li-f6v"/>
                             <constraint firstItem="sIb-LW-e46" firstAttribute="trailing" secondItem="eOx-zz-f0n" secondAttribute="trailing" id="8xO-cY-tQY"/>
                             <constraint firstItem="eOx-zz-f0n" firstAttribute="leading" secondItem="sIb-LW-e46" secondAttribute="leading" id="9xZ-hC-Nvo"/>
+                            <constraint firstItem="1YB-v5-FNC" firstAttribute="centerX" secondItem="sIb-LW-e46" secondAttribute="centerX" id="bWC-RW-pwl"/>
                             <constraint firstItem="sIb-LW-e46" firstAttribute="bottom" secondItem="eOx-zz-f0n" secondAttribute="bottom" id="jPo-sq-tNH"/>
                             <constraint firstItem="eOx-zz-f0n" firstAttribute="top" secondItem="sIb-LW-e46" secondAttribute="top" id="qsD-BZ-YuQ"/>
                         </constraints>

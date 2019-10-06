@@ -30,6 +30,7 @@
 		B269B1192348E40400B4F7DA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B269B1182348E40400B4F7DA /* Podfile */; };
 		B269B11B2348ECF000B4F7DA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269B11A2348ECF000B4F7DA /* Configuration.swift */; };
 		B270CEF7234A24EE005D4447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B270CEF6234A24EE005D4447 /* Main.storyboard */; };
+		B29A13F9234A50C800D3C54E /* OpenWeatherAPiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29A13F8234A50C800D3C54E /* OpenWeatherAPiTests.swift */; };
 		B2ACFEA7234A45D900714FA9 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFEA6234A45D900714FA9 /* String+Helpers.swift */; };
 		B2ACFEA9234A469D00714FA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFEA8234A469D00714FA9 /* Constants.swift */; };
 		B2B775CE234A32FB00AFD2C9 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B775CD234A32FB00AFD2C9 /* Details.storyboard */; };
@@ -80,6 +81,7 @@
 		B269B1182348E40400B4F7DA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = Meteo/Ressources/Configuration/Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B269B11A2348ECF000B4F7DA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B270CEF6234A24EE005D4447 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B29A13F8234A50C800D3C54E /* OpenWeatherAPiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPiTests.swift; sourceTree = "<group>"; };
 		B2ACFEA6234A45D900714FA9 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		B2ACFEA8234A469D00714FA9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B2B775CD234A32FB00AFD2C9 /* Details.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				B269B0ED2348D67600B4F7DA /* MeteoTests.swift */,
 				B269B0EF2348D67600B4F7DA /* Info.plist */,
+				B29A13F8234A50C800D3C54E /* OpenWeatherAPiTests.swift */,
 			);
 			path = MeteoTests;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B269B0EE2348D67600B4F7DA /* MeteoTests.swift in Sources */,
+				B29A13F9234A50C800D3C54E /* OpenWeatherAPiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
