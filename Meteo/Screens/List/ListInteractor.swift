@@ -23,7 +23,7 @@ protocol ListDataStore {
 }
 
 class ListInteractor: ListBusinessLogic, ListDataStore {
-    var name: String = "Meteo"
+    var name: String = "List"
 
     var presenter: ListPresentationLogic?
     var worker: ListWorker?
@@ -33,7 +33,7 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
     }
 
     func fetchCurrentForecasts(request: List.Forecasts.Request)  {
-        worker = ListWorker(weatherForecastsStore: OpenWeatherAPI())
+        worker = ListWorker(forecastsStore: OpenWeatherAPI())
 
         let dispatchGroup = DispatchGroup() // TODO: Create wrapping method in API to handle requesting several cities (i.e. move dispatch to API)
 

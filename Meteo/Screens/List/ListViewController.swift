@@ -17,7 +17,7 @@ protocol ListDisplayLogic: class {
     func displayCurrentForecasts(viewModel: List.Forecasts.ViewModel)
 }
 
-class ListViewController: UIViewController, ListDisplayLogic {
+class ListViewController: UIViewController, ListDisplayLogic, UITableViewAnimation {
     var interactor: ListBusinessLogic?
     var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
 
@@ -29,7 +29,9 @@ class ListViewController: UIViewController, ListDisplayLogic {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
-                self?.showTableView()
+                if let tableView = self?.tableView {
+                    self?.showTableView(tableView)
+                }
             }
         }
     }
@@ -93,7 +95,7 @@ class ListViewController: UIViewController, ListDisplayLogic {
     }
 
     func fetchCurrentForecasts() {
-        hideTableView()
+        hideTableView(tableView)
 
         let request = List.Forecasts.Request()
         interactor?.fetchCurrentForecasts(request: request)
@@ -122,22 +124,5 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: ListRouter.Routes.pushDetails, sender: self)
-    }
-}
-
-// Mark: Utility heplers
-extension ListViewController {
-    func animateTableView(alpha: CGFloat) {
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.tableView.alpha = alpha
-        }
-    }
-
-    func hideTableView() {
-        animateTableView(alpha: 0)
-    }
-
-    func showTableView() {
-        animateTableView(alpha: 1)
     }
 }

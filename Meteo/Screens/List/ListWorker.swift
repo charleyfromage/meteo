@@ -14,22 +14,15 @@ import UIKit
 import OpenWeatherMapKit
 
 class ListWorker {
-    var weatherForecastsStore: ForecastsStoreProtocol
+    var forecastsStore: ForecastsStoreProtocol
 
-    init(weatherForecastsStore: ForecastsStoreProtocol) {
-      self.weatherForecastsStore = weatherForecastsStore
+    init(forecastsStore: ForecastsStoreProtocol) {
+      self.forecastsStore = forecastsStore
     }
 
     func fetchCurrentForecasts(for city: String, completionHandler: @escaping (ForecastItem?, Error?) -> Void) {
-        weatherForecastsStore.fetchCurrentForecast(for: city) { forecast, error in
+        forecastsStore.fetchCurrentForecast(for: city) { forecast, error in
             completionHandler(forecast, error)
         }
     }
-}
-
-// MARK: - Orders store API
-
-protocol ForecastsStoreProtocol {
-    func fetchCurrentForecast(for city: String, completionHandler: @escaping (ForecastItem?, Error?) -> Void)
-    func fetchWeekForecast(for city: String, completionHandler: @escaping (ForecastItemsList?, Error?) -> Void)
 }

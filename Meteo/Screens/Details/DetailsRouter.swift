@@ -1,5 +1,5 @@
 //
-//  DetailsModels.swift
+//  DetailsRouter.swift
 //  Meteo
 //
 //  Created by Fromage Charley on 05/10/2019.
@@ -12,20 +12,13 @@
 
 import UIKit
 
-enum Details
-{
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
-    {
-    }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
+@objc protocol DetailsRoutingLogic {}
+
+protocol DetailsDataPassing {
+    var dataStore: DetailsDataStore? { get }
+}
+
+class DetailsRouter: NSObject, DetailsRoutingLogic, DetailsDataPassing {
+    weak var viewController: DetailsViewController?
+    var dataStore: DetailsDataStore?
 }

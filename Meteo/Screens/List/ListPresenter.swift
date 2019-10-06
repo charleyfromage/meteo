@@ -21,7 +21,7 @@ class ListPresenter: ListPresentationLogic {
     weak var viewController: ListDisplayLogic?
 
     func presentNavigationBarTitle() {
-        let viewModel = List.NavigationBar.ViewModel(title: "Meteo")
+        let viewModel = List.NavigationBar.ViewModel(title: Strings.List.navigationBarTitle)
         viewController?.displayNavigationBarTitle(viewModel: viewModel)
     }
 

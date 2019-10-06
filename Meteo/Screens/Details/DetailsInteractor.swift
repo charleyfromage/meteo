@@ -13,7 +13,7 @@
 import UIKit
 
 protocol DetailsBusinessLogic {
-    func doSomething(request: Details.Something.Request)
+    func fetchWeekForecasts(request: Details.Forecasts.Request)
 }
 
 protocol DetailsDataStore {
@@ -21,17 +21,19 @@ protocol DetailsDataStore {
 }
 
 class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
+    var name: String = "Details"
+
     var presenter: DetailsPresentationLogic?
     var worker: DetailsWorker?
-    var name: String = ""
 
-    // MARK: Do something
+    func fetchWeekForecasts(request: Details.Forecasts.Request) {
+        worker = DetailsWorker(forecastsStore: OpenWeatherAPI())
 
-    func doSomething(request: Details.Something.Request) {
-        worker = DetailsWorker()
-        worker?.doSomeWork()
+        worker?.fetchWeekForecasts(for: request.city, completionHandler: { [weak self] forecasts, error in
+            guard let forecasts = forecasts else { return }
 
-        let response = Details.Something.Response()
-        presenter?.presentSomething(response: response)
+            let response = Details.Forecasts.Response(forecasts: forecasts)
+            self?.presenter?.presentForecasts(response: response)
+        })
     }
 }
