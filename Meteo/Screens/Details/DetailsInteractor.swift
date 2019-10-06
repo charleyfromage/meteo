@@ -13,26 +13,35 @@
 import UIKit
 
 protocol DetailsBusinessLogic {
+    func setNavigationBarTitle()
     func fetchWeekForecasts(request: Details.Forecasts.Request)
 }
 
 protocol DetailsDataStore {
-    var name: String { get set }
+    var city: String? { get set }
 }
 
 class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
-    var name: String = "Details"
+    var city: String?
 
     var presenter: DetailsPresentationLogic?
     var worker: DetailsWorker?
 
+    func setNavigationBarTitle() {
+        if let city = city {
+            presenter?.presentNavigationBarTitle(with: city)
+        }
+    }
+
     func fetchWeekForecasts(request: Details.Forecasts.Request) {
+        guard let city = city else { return }
+
         worker = DetailsWorker(forecastsStore: OpenWeatherAPI())
 
-        worker?.fetchWeekForecasts(for: request.city, completionHandler: { [weak self] forecasts, error in
+        worker?.fetchWeekForecasts(for: city, completionHandler: { [weak self] forecasts, error in
             guard let forecasts = forecasts else { return }
 
-            let response = Details.Forecasts.Response(forecasts: forecasts)
+            let response = Details.Forecasts.Response(city: city, forecasts: forecasts)
             self?.presenter?.presentForecasts(response: response)
         })
     }

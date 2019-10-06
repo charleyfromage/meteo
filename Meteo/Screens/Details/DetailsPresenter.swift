@@ -13,11 +13,17 @@
 import UIKit
 
 protocol DetailsPresentationLogic {
+    func presentNavigationBarTitle(with title: String)
     func presentForecasts(response: Details.Forecasts.Response)
 }
 
 class DetailsPresenter: DetailsPresentationLogic {
     weak var viewController: DetailsDisplayLogic?
+
+    func presentNavigationBarTitle(with title: String) {
+        let viewModel = Details.NavigationBar.ViewModel(title: title)
+        viewController?.displayNavigationBarTitle(viewModel: viewModel)
+    }
 
     func presentForecasts(response: Details.Forecasts.Response) {
         var displayedForecasts = [Details.Forecasts.ViewModel.DisplayedForecast]()

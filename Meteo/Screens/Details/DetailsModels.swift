@@ -15,13 +15,21 @@ import OpenWeatherMapKit
 
 enum Details {
     // MARK: Use cases
+    enum NavigationBar {
+        struct ViewModel {
+            var title : String
+
+            init(title: String) {
+                self.title = title.capitalized
+            }
+        }
+    }
 
     enum Forecasts {
-        struct Request {
-            var city: String
-        }
+        struct Request {}
 
         struct Response {
+            var city: String
             var forecasts: ForecastItemsList
         }
 

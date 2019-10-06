@@ -19,11 +19,11 @@ protocol ListBusinessLogic {
 }
 
 protocol ListDataStore {
-    var name: String { get set }
+    var selectedCity: String? { get set }
 }
 
 class ListInteractor: ListBusinessLogic, ListDataStore {
-    var name: String = "List"
+    var selectedCity: String?
 
     var presenter: ListPresentationLogic?
     var worker: ListWorker?

@@ -17,7 +17,7 @@ import UIKit
 }
 
 protocol ListDataPassing {
-    var dataStore: ListDataStore? { get }
+    var dataStore: ListDataStore? { get set }
 }
 
 class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
@@ -53,6 +53,8 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
     // MARK: Passing data
 
     func passDataToDetails(source: ListDataStore, destination: inout DetailsDataStore) {
-        destination.name = source.name
+        if let selectedCity = source.selectedCity {
+            destination.city = selectedCity
+        }
     }
 }

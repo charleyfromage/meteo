@@ -13,6 +13,7 @@
 import UIKit
 
 protocol DetailsDisplayLogic: class {
+    func displayNavigationBarTitle(viewModel: Details.NavigationBar.ViewModel)
     func displaySomething(viewModel: Details.Forecasts.ViewModel)
 }
 
@@ -79,13 +80,13 @@ class DetailsViewController: UIViewController, DetailsDisplayLogic, UITableViewA
         super.viewDidLoad()
 
         setupTableView()
-//        setupNavigationBar()
+        setupNavigationBar()
         fetchWeekForecasts()
     }
 
-//    func setupNavigationBar() {
-//        interactor?.setNavigationBarTitle()
-//    }
+    func setupNavigationBar() {
+        interactor?.setNavigationBarTitle()
+    }
 
     func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
@@ -96,8 +97,12 @@ class DetailsViewController: UIViewController, DetailsDisplayLogic, UITableViewA
     func fetchWeekForecasts() {
         hideTableView(tableView)
 
-        let request = Details.Forecasts.Request(city: "Paris")
+        let request = Details.Forecasts.Request()
         interactor?.fetchWeekForecasts(request: request)
+    }
+
+    func displayNavigationBarTitle(viewModel: Details.NavigationBar.ViewModel) {
+        title = viewModel.title
     }
 
     func displaySomething(viewModel: Details.Forecasts.ViewModel) {

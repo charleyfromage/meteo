@@ -123,6 +123,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.dataStore?.selectedCity = displayedForecasts[indexPath.row].city
         performSegue(withIdentifier: ListRouter.Routes.pushDetails, sender: self)
     }
 }
