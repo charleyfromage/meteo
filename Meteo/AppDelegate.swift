@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Open weather API initialization
         OpenWeatherMapKit.initialize(withAppId: Configuration.APIs.openWeatherApiKey)
 
+        #if DEBUG
+            print("This is a debug target!")
+        #endif
+
         return true
     }
 
