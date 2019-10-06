@@ -14,6 +14,7 @@ import UIKit
 import OpenWeatherMapKit
 
 protocol ListBusinessLogic {
+    func setNavigationBarTitle()
     func fetchCurrentForecasts(request: List.Forecasts.Request)
 }
 
@@ -22,10 +23,14 @@ protocol ListDataStore {
 }
 
 class ListInteractor: ListBusinessLogic, ListDataStore {
-    var name: String = ""
+    var name: String = "Meteo"
 
     var presenter: ListPresentationLogic?
     var worker: ListWorker?
+
+    func setNavigationBarTitle() {
+        presenter?.presentNavigationBarTitle()
+    }
 
     func fetchCurrentForecasts(request: List.Forecasts.Request)  {
         worker = ListWorker(weatherForecastsStore: OpenWeatherAPI())

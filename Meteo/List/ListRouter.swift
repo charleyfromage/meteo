@@ -24,6 +24,10 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
     weak var viewController: ListViewController?
     var dataStore: ListDataStore?
 
+    enum Routes {
+        static let pushDetails = "Details"
+    }
+
     // MARK: Routing
 
     func routeToDetails(segue: UIStoryboardSegue?) {
@@ -43,7 +47,7 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
     // MARK: Navigation
 
     func navigateToDetails(source: ListViewController, destination: DetailsViewController) {
-        source.show(destination, sender: nil)
+        source.navigationController?.pushViewController(destination, animated: true)
     }
 
     // MARK: Passing data

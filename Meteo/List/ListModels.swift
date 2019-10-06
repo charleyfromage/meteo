@@ -15,6 +15,12 @@ import OpenWeatherMapKit
 
 enum List {
     // MARK: Use cases
+    enum NavigationBar {
+        struct ViewModel {
+            var title : String
+        }
+    }
+
     enum Forecasts {
         struct Request {
             var cities = ["Paris", "Nantes", "Angers", "Saumur"]

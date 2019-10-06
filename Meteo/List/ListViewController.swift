@@ -13,6 +13,7 @@
 import UIKit
 
 protocol ListDisplayLogic: class {
+    func displayNavigationBarTitle(viewModel: List.NavigationBar.ViewModel)
     func displayCurrentForecasts(viewModel: List.Forecasts.ViewModel)
 }
 
@@ -76,11 +77,19 @@ class ListViewController: UIViewController, ListDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTableView()
+        setupNavigationBar()
+        fetchCurrentForecasts()
+    }
+
+    func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+    }
 
-        fetchCurrentForecasts()
+    func setupNavigationBar() {
+        interactor?.setNavigationBarTitle()
     }
 
     func fetchCurrentForecasts() {
@@ -88,6 +97,10 @@ class ListViewController: UIViewController, ListDisplayLogic {
 
         let request = List.Forecasts.Request()
         interactor?.fetchCurrentForecasts(request: request)
+    }
+
+    func displayNavigationBarTitle(viewModel: List.NavigationBar.ViewModel) {
+        title = viewModel.title
     }
 
     func displayCurrentForecasts(viewModel: List.Forecasts.ViewModel) {
@@ -105,6 +118,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = displayedForecasts[indexPath.row].description
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: ListRouter.Routes.pushDetails, sender: self)
     }
 }
 

@@ -13,11 +13,17 @@
 import UIKit
 
 protocol ListPresentationLogic {
+    func presentNavigationBarTitle()
     func presentFetchedForecasts(response: List.Forecasts.Response)
 }
 
 class ListPresenter: ListPresentationLogic {
     weak var viewController: ListDisplayLogic?
+
+    func presentNavigationBarTitle() {
+        let viewModel = List.NavigationBar.ViewModel(title: "Meteo")
+        viewController?.displayNavigationBarTitle(viewModel: viewModel)
+    }
 
     func presentFetchedForecasts(response: List.Forecasts.Response) {
         var displayedForecasts = [List.Forecasts.ViewModel.DisplayedForecast]()

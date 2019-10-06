@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="520-ja-JY9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,19 +7,20 @@
     </dependencies>
     <scenes>
         <!--Details View Controller-->
-        <scene sceneID="iAb-qc-H6l">
+        <scene sceneID="b5M-Kk-WpC">
             <objects>
-                <viewController id="3wq-y8-O38" customClass="DetailsViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="okT-vG-76H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="520-ja-JY9" customClass="DetailsViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ert-wK-8mn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ngM-de-PH0"/>
+                        <viewLayoutGuide key="safeArea" id="cWt-kj-hff"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bxF-Ei-Tvc"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n4L-sc-PtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8U-tA-xk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="90"/>
+            <point key="canvasLocation" x="2219" y="134"/>
         </scene>
     </scenes>
 </document>

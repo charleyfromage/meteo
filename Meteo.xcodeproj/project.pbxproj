@@ -26,12 +26,12 @@
 		B269B10F2348DB3700B4F7DA /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269B1092348DB3700B4F7DA /* DetailsModels.swift */; };
 		B269B1102348DB3700B4F7DA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269B10A2348DB3700B4F7DA /* DetailsViewController.swift */; };
 		B269B1112348DB3700B4F7DA /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269B10B2348DB3700B4F7DA /* DetailsInteractor.swift */; };
-		B269B1132348DE2600B4F7DA /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B269B1122348DE2600B4F7DA /* List.storyboard */; };
-		B269B1142348E07E00B4F7DA /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B269B1122348DE2600B4F7DA /* List.storyboard */; };
 		B269B1172348E39700B4F7DA /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269B1162348E39700B4F7DA /* OpenWeatherAPI.swift */; };
 		B269B1192348E40400B4F7DA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B269B1182348E40400B4F7DA /* Podfile */; };
 		B269B11B2348ECF000B4F7DA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B269B11A2348ECF000B4F7DA /* Configuration.swift */; };
-		B269B11D2348F12500B4F7DA /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B269B11C2348F12500B4F7DA /* Details.storyboard */; };
+		B270CEF7234A24EE005D4447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B270CEF6234A24EE005D4447 /* Main.storyboard */; };
+		B2B775CE234A32FB00AFD2C9 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B775CD234A32FB00AFD2C9 /* Details.storyboard */; };
+		B2B775D0234A330800AFD2C9 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B775CF234A330800AFD2C9 /* List.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,11 +71,12 @@
 		B269B1092348DB3700B4F7DA /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
 		B269B10A2348DB3700B4F7DA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B269B10B2348DB3700B4F7DA /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
-		B269B1122348DE2600B4F7DA /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		B269B1162348E39700B4F7DA /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
 		B269B1182348E40400B4F7DA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B269B11A2348ECF000B4F7DA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		B269B11C2348F12500B4F7DA /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
+		B270CEF6234A24EE005D4447 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B2B775CD234A32FB00AFD2C9 /* Details.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
+		B2B775CF234A330800AFD2C9 /* List.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		E22CF4EAA599FDA0C7F84623 /* Pods-MeteoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoTests.debug.xcconfig"; path = "Target Support Files/Pods-MeteoTests/Pods-MeteoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +150,7 @@
 				B269B0D82348D67500B4F7DA /* SceneDelegate.swift */,
 				B269B0DF2348D67600B4F7DA /* Assets.xcassets */,
 				B269B0E12348D67600B4F7DA /* LaunchScreen.storyboard */,
+				B270CEF6234A24EE005D4447 /* Main.storyboard */,
 				B269B0E42348D67600B4F7DA /* Info.plist */,
 				B269B1182348E40400B4F7DA /* Podfile */,
 				B269B11A2348ECF000B4F7DA /* Configuration.swift */,
@@ -168,7 +170,7 @@
 		B269B0F82348DA7C00B4F7DA /* List */ = {
 			isa = PBXGroup;
 			children = (
-				B269B1122348DE2600B4F7DA /* List.storyboard */,
+				B2B775CF234A330800AFD2C9 /* List.storyboard */,
 				B269B0FC2348DB2900B4F7DA /* ListRouter.swift */,
 				B269B0FA2348DB2900B4F7DA /* ListPresenter.swift */,
 				B269B0FE2348DB2900B4F7DA /* ListViewController.swift */,
@@ -182,7 +184,7 @@
 		B269B0F92348DA8100B4F7DA /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				B269B11C2348F12500B4F7DA /* Details.storyboard */,
+				B2B775CD234A32FB00AFD2C9 /* Details.storyboard */,
 				B269B1062348DB3700B4F7DA /* DetailsPresenter.swift */,
 				B269B1072348DB3700B4F7DA /* DetailsWorker.swift */,
 				B269B1082348DB3700B4F7DA /* DetailsRouter.swift */,
@@ -286,10 +288,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B269B11D2348F12500B4F7DA /* Details.storyboard in Resources */,
+				B2B775CE234A32FB00AFD2C9 /* Details.storyboard in Resources */,
 				B269B0E32348D67600B4F7DA /* LaunchScreen.storyboard in Resources */,
-				B269B1132348DE2600B4F7DA /* List.storyboard in Resources */,
+				B270CEF7234A24EE005D4447 /* Main.storyboard in Resources */,
 				B269B1192348E40400B4F7DA /* Podfile in Resources */,
+				B2B775D0234A330800AFD2C9 /* List.storyboard in Resources */,
 				B269B0E02348D67600B4F7DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +301,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B269B1142348E07E00B4F7DA /* List.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
